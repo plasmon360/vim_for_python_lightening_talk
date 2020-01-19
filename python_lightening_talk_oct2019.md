@@ -45,7 +45,7 @@ This will only display in the notes window.
 
 ### Modality in VIM
 <center>
-<img src = "/lib/images/vim-modes_simple.svg.png" height = 400>
+<img src = "lib/images/vim-modes_simple.svg.png" height = 400>
 </center>
 
 ---
