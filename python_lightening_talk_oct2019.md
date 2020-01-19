@@ -32,7 +32,7 @@ This will only display in the notes window.
 
 
 ### Not so friendly cheatsheet
-<img src = "../lib/images/vim_cheat_sheet_for_programmers_screen.png">
+<img src = "lib/images/vim_cheat_sheet_for_programmers_screen.png">
 
 
 ## Things are simpler after understanding 
