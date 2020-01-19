@@ -1,0 +1,203 @@
+<style>
+.container{
+    display: flex;
+}
+.col{
+    flex: 1;
+}
+</style>
+
+# VIM for Python Development
+My 90 day experience : Pros and Cons
+
+Bala Juluri
+
+---
+## My reasons for trying out VIM 
+
+- Small form Linux systems (Raspberry Pi's)
+- Remote Linux machines 
+
+---
+# Quick Intro to vim 
+
+- Text Editor 
+    - Started as vi in 1976
+    - Not specific to python. Can be set as a IDE for Python
+    - Extremely powerful.
+
+     
+
+
+<h3>Brutal Learning Curve</h3>
+<img src="/lib/images/vim_learning_curve.jpg" style="float:" >
+
+
+
+
+<div class="container">
+
+<div class="col">
+<img src = "/lib/images/bob_ross.gif" height = 100%>
+</div>
+
+<div class="col">
+<img src = "/lib/images/bob_ross2.gif" height = 100%>
+</div>
+
+<div class="col">
+<img src = "/lib/images/bob_ross3.gif" height = 100%>
+</div>
+</div>
+
+---
+
+!['hello']("/lib/images/vim-modes.png")
+
+---
+## Elements of VIM's Grammer
+
+### Motions
+<div class="container">
+<div class="col">
+<pre><code>
+I  love programming in Python.
+^       ^      ^  ^ ^        ^
+|       |      |  | |        |
+^       b      |  e w        $ 
+            cursor  
+    </code>         </pre> 
+</div>
+<div class="col">
+
+|command| motion |
+|---------|--------|
+| w | One word|
+| j | One line Down |
+| $ | End of Line |    
+| } | End of Paragraph|    
+| ) | End of Sentence|
+| ] | Next class definition|
+| ]m| Next method definition |
+| ' |     '       |
+| ' |     '       |
+| ' |     '       |
+</div>
+</div>
+
+
+<div class="container">
+<div class="col">
+<h3>Operators</h3>
+   
+|command| motion |
+|---------|--------|
+| d | delete |
+| p | paste |
+| c | change |    
+| y | yank/copy|    
+| gu| make lowercase|
+| ' |     '       |
+| ' |     '       |
+| ' |     '       |
+
+</div>
+
+<div class="col">
+<h3>Text Objects</h3>
+
+|command| text object|
+|---------|--------|
+| p| paragraph|
+| " | text in quotes|
+| t | text in tags|    
+| y | yank/copy|    
+| gu| make lowercase|
+| ' |     '       |
+| ' |     '       |
+| ' |     '       |
+
+</div>
+
+<div class="col">
+<h3>Modifiers</h3>
+Act on text objects
+
+|command| text object|
+|---------|--------|
+| a | around a text object|
+| i | inside a text object|
+
+</div>
+</div>
+---
+
+- VIM's Grammer Rules
+
+    - Rule 1:
+    ~~~~
+        Motion = {count}{motion}
+                    3        j 
+                 move 3 lines down
+    ~~~~
+    
+    - Rule 2: 
+    ~~~~
+         Operate with a motion:     {Operator} {Motion}
+                                         d        3j
+                                    delete      with 3 lines down
+    ~~~~
+    
+    - Rule 3:
+    ~~~~
+    
+    Operate on text object:   {OPERATOR} {modifier} {text object}
+                                   c          i             "
+                                change      inside        ""
+    ~~~~
+---
+
+- Pros
+    - Grammer (less typing and fast navigation) 
+    - Available on most linux os by default.
+    - Plethora of Plugins ( all the usual IDE stuff )
+    - Never had it crash on me.
+    - Coustimzation to extreme.
+    - Good documentation.
+    - Syncing customization on various machines.
+    - Free
+---
+
+- Cons
+    - Initial Frustration with changing modes
+    - Extremely steep learning curve (registers, buffers, quickfix, location lists, macros, marks, tabs, windows,sessions, key mappings and many more concepts)
+    - You are always learning it.
+    - Initial big dip in productity.
+    - Takes time to come with good set of customization for setting up an environment.
+    - Takes time to get muscle memory.
+    - Once you get used to it, you will want to have vim everywhere.
+---
+
+- Carrying vim with me to other tools like jupyter notebook and chrome browsers.
+    - in pycharm (with idea vim plugin)
+    - in Jupyter notebooks(jpyter-vim-binding)
+    - in bash/zsh shell(set -o vi in ~/.bashrc or ~/.zshrc)
+    - in chrome/firefox (cvim)
+--- 
+
+- Three things I want you to remember tonight:
+    - VIM steep learning curve, but worth the time investment in long-term.
+    - Learn VIM grammer before seeing a cheatsheet.
+    - you can quit vim (esc + :q)
+
+---- 
+- Some TIPS that I found useful:
+    - Install Neovim rather than vim for python development
+        - my notes are here: 
+    - Start with some popular vimrc files and go from there.
+    - Watch Leeren's video on youtube
+        - Navigating Python Code with fuzzy find file browsing
+        - splitting windows
+        - saving sessions
+---
+       
